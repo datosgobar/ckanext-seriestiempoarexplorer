@@ -14,7 +14,7 @@ class SeriestiempoarlandingPlugin(plugins.SingletonPlugin):
         toolkit.add_resource('fanstatic', 'seriestiempoarlanding')
 
     def before_map(self, m):
-        m.connect('/series/api/series',
+        m.connect('/series/api/series/',
                   controller='ckanext.seriestiempoarlanding.controller:TSArController',
                   action='series_tiempo')
         return m
