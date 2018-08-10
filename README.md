@@ -13,9 +13,9 @@ Para instalar `ckanext-seriestiempoarlanding`:
 
 2. Instalá el paquete de Python `ckanext-seriestiempoarlanding` dentro del _virtualenv_:
 
-     pip install -e git+https://github.com/chdigiorno/ckanext-seriestiempoarlanding.git#egg=ckanext-seriestiempoarlanding
+     pip install -e git+https://github.com/datosgobar/series-seriestiempoarexplorer.git#egg=ckanext-seriestiempoarexplorer
 
-3. Agregá `seriestiempoarlanding` a la lista de `ckan.plugins` en tu archivo de configuración de CKAN
+3. Agregá `seriestiempoarexplorer` a la lista de `ckan.plugins` en tu archivo de configuración de CKAN
    (por defecto ubicada en `/etc/ckan/default/production.ini` dentro del contenedor `portal`).
 
 4. Editar el archivo de configuración de Andino `/etc/ckan/default/production.ini` dentro del contenedor `portal` y agregar el setting `andino.base_page = andino_custom_base_page.html`, provisto por `ckanext-andinotemplate`.

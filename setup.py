@@ -10,7 +10,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='''ckanext-seriestiempoarlanding''',
+    name='''ckanext-seriestiempoarexplorer''',
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
@@ -21,7 +21,7 @@ setup(
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/datosgobar/ckanext-seriestiempoarlanding',
+    url='https://github.com/datosgobar/ckanext-seriestiempoarexplorer',
 
     # Author details
     author='''Ministerio de Modernización''',
@@ -80,7 +80,7 @@ setup(
     # pip to create the appropriate form of executable for the target platform.
     entry_points='''
         [ckan.plugins]
-        seriestiempoarlanding=ckanext.seriestiempoarlanding.plugin:SeriestiempoarlandingPlugin
+        seriestiempoarexplorer=ckanext.seriestiempoarexplorer.plugin:SeriestiempoarlandingPlugin
 
         [babel.extractors]
         ckan = ckan.lib.extract:extract_ckan

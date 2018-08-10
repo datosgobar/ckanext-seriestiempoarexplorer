@@ -18,17 +18,17 @@ class SeriestiempoarlandingPlugin(plugins.SingletonPlugin):
     def update_config(self, config_):
         toolkit.add_template_directory(config_, 'templates')
         toolkit.add_public_directory(config_, 'public')
-        toolkit.add_resource('fanstatic', 'seriestiempoarlanding')
+        toolkit.add_resource('fanstatic', 'seriestiempoarexplorer')
 
     def before_map(self, m):
         for path_conf in self.valid_series_paths:
             if path_conf.get("name"):
                 m.connect(path_conf.get("name"), path_conf.get("path"),
-                          controller='ckanext.seriestiempoarlanding.controller:TSArController',
+                          controller='ckanext.seriestiempoarexplorer.controller:TSArController',
                           action='series_tiempo')
             else:
                 m.connect(path_conf.get("path"),
-                          controller='ckanext.seriestiempoarlanding.controller:TSArController',
+                          controller='ckanext.seriestiempoarexplorer.controller:TSArController',
                           action='series_tiempo')
         return m
 
