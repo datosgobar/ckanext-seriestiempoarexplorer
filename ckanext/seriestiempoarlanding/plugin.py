@@ -7,10 +7,10 @@ class SeriestiempoarlandingPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IRoutes)
 
     valid_series_paths = [
-        "/series/api",
-        "/series/api/",
-        "/series/api/series",
-        "/series/api/series/",
+        {"path": "/series/api"},
+        {"path": "/series/api/", "name": "series_tiempo_ar_explorer"},
+        {"path": "/series/api/series"},
+        {"path": "/series/api/series/"},
     ]
 
     # IConfigurer
@@ -21,10 +21,15 @@ class SeriestiempoarlandingPlugin(plugins.SingletonPlugin):
         toolkit.add_resource('fanstatic', 'seriestiempoarlanding')
 
     def before_map(self, m):
-        for path in self.valid_series_paths:
-            m.connect(path,
-                      controller='ckanext.seriestiempoarlanding.controller:TSArController',
-                      action='series_tiempo')
+        for path_conf in self.valid_series_paths:
+            if path_conf.get("name"):
+                m.connect(path_conf.get("name"), path_conf.get("path"),
+                          controller='ckanext.seriestiempoarlanding.controller:TSArController',
+                          action='series_tiempo')
+            else:
+                m.connect(path_conf.get("path"),
+                          controller='ckanext.seriestiempoarlanding.controller:TSArController',
+                          action='series_tiempo')
         return m
 
     def after_map(self, m):
