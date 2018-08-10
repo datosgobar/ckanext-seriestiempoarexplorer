@@ -34,7 +34,7 @@
             catalogId: "datosgobar",
             useBrowserRouter: true,
             browserRouterConf: {
-                basename: "/series/api/series"
+                basename: "/series/api"
             }
         })
     }</script>
@@ -43,6 +43,11 @@
 
 
 {%- block content %}
-<noscript>You need to enable JavaScript to run this app.</noscript>
-<div id="root"></div>
+<div class="home">
+    <div id="title" class="container-fluid" style="padding-top: 72px">
+            <noscript>You need to enable JavaScript to run this app.</noscript>
+            <div id="root"></div>
+    </div>
+
+</div>
 {% endblock -%}
