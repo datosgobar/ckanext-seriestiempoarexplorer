@@ -13,7 +13,7 @@ Para instalar `ckanext-seriestiempoarlanding`:
 
 2. Instalá el paquete de Python `ckanext-seriestiempoarlanding` dentro del _virtualenv_:
 
-     pip install -e git+https://github.com/datosgobar/series-seriestiempoarexplorer.git#egg=ckanext-seriestiempoarexplorer
+     pip install -e git+https://github.com/datosgobar/ckanext-seriestiempoarexplorer.git#egg=ckanext-seriestiempoarexplorer
 
 3. Agregá `seriestiempoarexplorer` a la lista de `ckan.plugins` en tu archivo de configuración de CKAN
    (por defecto ubicada en `/etc/ckan/default/production.ini` dentro del contenedor `portal`).
