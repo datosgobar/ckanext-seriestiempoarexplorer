@@ -1,7 +1,7 @@
-# ckanext-seriestiempoarlanding
+# ckanext-seriestiempoarexplorer
 
-Template de SeriesTiempoArLandingPlugin para Andino.
-Template para integración de [Portal Andino](https://github.com/datosgobar/portal-andino) y [Series de Tiempo Ar Explorer](https://github.com/datosgobar/series-tiempo-ar-explorer/)
+SeriesTiempoArExplorerPlugin para Andino.
+Integración de [Portal Andino](https://github.com/datosgobar/portal-andino) y [Series de Tiempo Ar Explorer](https://github.com/datosgobar/series-tiempo-ar-explorer/)
 
 ## Instalación
 
