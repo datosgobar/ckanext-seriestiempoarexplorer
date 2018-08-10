@@ -8,7 +8,7 @@ nosetests --ckan \
           --nologcapture \
           --with-pylons=subdir/test.ini \
           --with-coverage \
-          --cover-package=ckanext.seriestiempoarlanding \
+          --cover-package=ckanext.seriestiempoarexplorer \
           --cover-inclusive \
           --cover-erase \
           --cover-tests

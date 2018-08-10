@@ -5,13 +5,13 @@ Integración de [Portal Andino](https://github.com/datosgobar/portal-andino) y [
 
 ## Instalación
 
-Para instalar `ckanext-seriestiempoarlanding`:
+Para instalar `ckanext-seriestiempoarexplorer`:
 
 1. Activá el _virtualenv_ de tu instancia de CKAN:
 
      . /usr/lib/ckan/default/bin/activate
 
-2. Instalá el paquete de Python `ckanext-seriestiempoarlanding` dentro del _virtualenv_:
+2. Instalá el paquete de Python `ckanext-seriestiempoarexplorer` dentro del _virtualenv_:
 
      pip install -e git+https://github.com/datosgobar/ckanext-seriestiempoarexplorer.git#egg=ckanext-seriestiempoarexplorer
 
