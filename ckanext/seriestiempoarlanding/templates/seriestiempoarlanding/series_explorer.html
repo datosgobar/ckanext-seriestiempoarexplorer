@@ -31,9 +31,9 @@
             src="https://datosgobar.github.io/series-tiempo-ar-explorer/static/js/main.31cd1498.js"></script>
     <script>window.onload = function () {
         TSExplorer.render("root", {
-            featured: ["103.1_I2N_2016_M_15", "168.1_T_CAMBIOR_D_0_0_26", "116.3_TCRMA_0_M_36", "143.3_NO_PR_2004_A_21", "101.1_I2NG_2016_M_22", "11.3_VMASD_2004_M_23", "11.3_VMATC_2004_M_12", "103.1_I2N_2016_M_19", "106.4_I1PNMEEVM_2015_M_51", "106.4_I1TPNVM_2015_M_47", "106.4_I1NGVM_2015_M_41", "106.4_I1NGVA_2015_M_39"],
+            featured: "{{ h.get_theme_config('series_tiempo_ar_explorer.featured') or '' }}".split(",").filter(Boolean),
             seriesApiUri: "http://apis-stg.datos.gob.ar/series/api",
-            catalogId: "datosgobar",
+            catalogId: "{{ h.get_theme_config('series_tiempo_ar_explorer.catalog_id') or '' }}",
             useBrowserRouter: true,
             browserRouterConf: {
                 basename: "/series/api"
