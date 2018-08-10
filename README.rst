@@ -1,166 +1,33 @@
-.. You should enable this project on travis-ci.org and coveralls.io to make
-   these badges work. The necessary Travis and Coverage config files have been
-   generated for you.
 
-.. image:: https://travis-ci.org/datosgobar/ckanext-seriestiempoarlanding.svg?branch=master
-    :target: https://travis-ci.org/datosgobar/ckanext-seriestiempoarlanding
+[![Build Status](https://travis-ci.org/datosgobar/ckanext-seriestiempoarlanding.svg?branch=master)](https://travis-ci.org/datosgobar/ckanext-seriestiempoarlanding)
 
-.. image:: https://coveralls.io/repos/datosgobar/ckanext-seriestiempoarlanding/badge.svg
-  :target: https://coveralls.io/r/datosgobar/ckanext-seriestiempoarlanding
+# ckanext-seriestiempoarlanding
 
-.. image:: https://pypip.in/download/ckanext-seriestiempoarlanding/badge.svg
-    :target: https://pypi.python.org/pypi//ckanext-seriestiempoarlanding/
-    :alt: Downloads
+Template de SeriesTiempoArLandingPlugin para Andino.
+Template para integración de [Portal Andino](https://github.com/datosgobar/portal-andino) y [Series de Tiempo Ar Explorer](https://github.com/datosgobar/series-tiempo-ar-explorer/)
 
-.. image:: https://pypip.in/version/ckanext-seriestiempoarlanding/badge.svg
-    :target: https://pypi.python.org/pypi/ckanext-seriestiempoarlanding/
-    :alt: Latest Version
+## Instalación
 
-.. image:: https://pypip.in/py_versions/ckanext-seriestiempoarlanding/badge.svg
-    :target: https://pypi.python.org/pypi/ckanext-seriestiempoarlanding/
-    :alt: Supported Python versions
+Para instalar `ckanext-seriestiempoarlanding`:
 
-.. image:: https://pypip.in/status/ckanext-seriestiempoarlanding/badge.svg
-    :target: https://pypi.python.org/pypi/ckanext-seriestiempoarlanding/
-    :alt: Development Status
-
-.. image:: https://pypip.in/license/ckanext-seriestiempoarlanding/badge.svg
-    :target: https://pypi.python.org/pypi/ckanext-seriestiempoarlanding/
-    :alt: License
-
-=============
-ckanext-seriestiempoarlanding
-=============
-
-.. Put a description of your extension here:
-   What does it do? What features does it have?
-   Consider including some screenshots or embedding a video!
-
-
-------------
-Requirements
-------------
-
-For example, you might want to mention here which versions of CKAN this
-extension works with.
-
-
-------------
-Installation
-------------
-
-.. Add any additional install steps to the list below.
-   For example installing any non-Python dependencies or adding any required
-   config settings.
-
-To install ckanext-seriestiempoarlanding:
-
-1. Activate your CKAN virtual environment, for example::
+1. Activá el _virtualenv_ de tu instancia de CKAN:
 
      . /usr/lib/ckan/default/bin/activate
 
-2. Install the ckanext-seriestiempoarlanding Python package into your virtual environment::
+2. Instalá el paquete de Python `ckanext-seriestiempoarlanding` dentro del _virtualenv_:
 
-     pip install ckanext-seriestiempoarlanding
+     pip install -e git+https://github.com/chdigiorno/ckanext-seriestiempoarlanding.git#egg=ckanext-seriestiempoarlanding
 
-3. Add ``seriestiempoarlanding`` to the ``ckan.plugins`` setting in your CKAN
-   config file (by default the config file is located at
-   ``/etc/ckan/default/production.ini``).
+3. Agregá `seriestiempoarlanding` a la lista de `ckan.plugins` en tu archivo de configuración de CKAN
+   (por defecto ubicada en `/etc/ckan/default/production.ini` dentro del contenedor `portal`).
 
-4. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu::
+4. Editar el archivo de configuración de Andino `/etc/ckan/default/production.ini` dentro del contenedor `portal` y agregar el setting `andino.base_page = andino_custom_base_page.html`, provisto por `ckanext-andinotemplate`.
 
-     sudo service apache2 reload
+5. Reiniciá Andino.
 
+## Funcionalidades base
 
----------------
-Config Settings
----------------
+El plugin template default permite agregar a tu instancia de Andino dos puntos de menú en la navegación superior de Andino:
 
-Document any optional config settings here. For example::
-
-    # The minimum number of hours to wait before re-checking a resource
-    # (optional, default: 24).
-    ckanext.seriestiempoarlanding.some_setting = some_default_value
-
-
-------------------------
-Development Installation
-------------------------
-
-To install ckanext-seriestiempoarlanding for development, activate your CKAN virtualenv and
-do::
-
-    git clone https://github.com/datosgobar/ckanext-seriestiempoarlanding.git
-    cd ckanext-seriestiempoarlanding
-    python setup.py develop
-    pip install -r dev-requirements.txt
-
-
------------------
-Running the Tests
------------------
-
-To run the tests, do::
-
-    nosetests --nologcapture --with-pylons=test.ini
-
-To run the tests and produce a coverage report, first make sure you have
-coverage installed in your virtualenv (``pip install coverage``) then run::
-
-    nosetests --nologcapture --with-pylons=test.ini --with-coverage --cover-package=ckanext.seriestiempoarlanding --cover-inclusive --cover-erase --cover-tests
-
-
----------------------------------
-Registering ckanext-seriestiempoarlanding on PyPI
----------------------------------
-
-ckanext-seriestiempoarlanding should be availabe on PyPI as
-https://pypi.python.org/pypi/ckanext-seriestiempoarlanding. If that link doesn't work, then
-you can register the project on PyPI for the first time by following these
-steps:
-
-1. Create a source distribution of the project::
-
-     python setup.py sdist
-
-2. Register the project::
-
-     python setup.py register
-
-3. Upload the source distribution to PyPI::
-
-     python setup.py sdist upload
-
-4. Tag the first release of the project on GitHub with the version number from
-   the ``setup.py`` file. For example if the version number in ``setup.py`` is
-   0.0.1 then do::
-
-       git tag 0.0.1
-       git push --tags
-
-
-----------------------------------------
-Releasing a New Version of ckanext-seriestiempoarlanding
-----------------------------------------
-
-ckanext-seriestiempoarlanding is availabe on PyPI as https://pypi.python.org/pypi/ckanext-seriestiempoarlanding.
-To publish a new version to PyPI follow these steps:
-
-1. Update the version number in the ``setup.py`` file.
-   See `PEP 440 <http://legacy.python.org/dev/peps/pep-0440/#public-version-identifiers>`_
-   for how to choose version numbers.
-
-2. Create a source distribution of the new version::
-
-     python setup.py sdist
-
-3. Upload the source distribution to PyPI::
-
-     python setup.py sdist upload
-
-4. Tag the new release of the project on GitHub with the version number from
-   the ``setup.py`` file. For example if the version number in ``setup.py`` is
-   0.0.2 then do::
-
-       git tag 0.0.2
-       git push --tags
+* Andino: Al hacer click redirige a la [documentación oficial de Portal Andino](http://portal-andino.readthedocs.io/).
+* Nueva Sección: Es una demostración de cómo agregar una ṕágina de contenido estático en Andino.
