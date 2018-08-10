@@ -1,6 +1,3 @@
-
-[![Build Status](https://travis-ci.org/datosgobar/ckanext-seriestiempoarlanding.svg?branch=master)](https://travis-ci.org/datosgobar/ckanext-seriestiempoarlanding)
-
 # ckanext-seriestiempoarlanding
 
 Template de SeriesTiempoArLandingPlugin para Andino.
