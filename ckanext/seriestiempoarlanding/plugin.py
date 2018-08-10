@@ -6,6 +6,13 @@ class SeriestiempoarlandingPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IRoutes)
 
+    valid_series_paths = [
+        "/series/api",
+        "/series/api/",
+        "/series/api/series",
+        "/series/api/series/",
+    ]
+
     # IConfigurer
 
     def update_config(self, config_):
@@ -14,9 +21,10 @@ class SeriestiempoarlandingPlugin(plugins.SingletonPlugin):
         toolkit.add_resource('fanstatic', 'seriestiempoarlanding')
 
     def before_map(self, m):
-        m.connect('/series/api/series/',
-                  controller='ckanext.seriestiempoarlanding.controller:TSArController',
-                  action='series_tiempo')
+        for path in self.valid_series_paths:
+            m.connect(path,
+                      controller='ckanext.seriestiempoarlanding.controller:TSArController',
+                      action='series_tiempo')
         return m
 
     def after_map(self, m):
