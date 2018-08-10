@@ -1,35 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><title>Explorador de la API de Series de Tiempo | Ministerio de Modernización</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="viewport" content="width=device-width,user-scalable=no"/>
-    <meta name="format-detection" content="telephone=no">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site:id" content="@datosgobar">
-    <meta name="twitter:image:alt" content="Datos Argentina">
-    <meta property="og:url" content="https://datosgobar.github.io/series-tiempo-ar-explorer/"/>
-    <meta property="og:title" content="Datos Argentina | Explorador de Series de Tiempo"/>
-    <meta property="og:description"
-          content="Consultá indicadores con evolución en el tiempo, de forma personalizada y actualizada."/>
-    <meta property="og:image" content="http://datos.gob.ar/user_images/FB-datos.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="2400">
-    <meta property="og:image:height" content="1260">
-    <meta property="og:locale" content="es_AR">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/ico/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/ico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/ico/favicon-16x16.png">
-    <link rel="manifest" href="/ico/site.webmanifest">
-    <link rel="mask-icon" href="/ico/safari-pinned-tab.svg" color="#0072bc">
-    <link rel="shortcut icon" href="/ico/favicon.ico">
-    <meta name="msapplication-TileColor" content="#0072bc">
-    <meta name="msapplication-config" content="/ico/browserconfig.xml">
-    <meta name="theme-color" content="#0072bc">
+{% extends "gobar_page.html" %}
 
-      <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+{% block styles %}
+      {{ super() }}
       {% resource 'seriestiempoarlanding/assets/css/bootstrap.css' %}
       {% resource 'seriestiempoarlanding/assets/css/font-awesome/fontawesome-pro-brands.css' %}
       {% resource 'seriestiempoarlanding/assets/css/font-awesome/fontawesome-pro-core.css' %}
@@ -40,8 +12,11 @@
       {% resource 'seriestiempoarlanding/assets/css/normalize.css' %}
       {% resource 'seriestiempoarlanding/assets/css/react-datepicker.css' %}
       {% resource 'seriestiempoarlanding/assets/css/main.css' %}
+{% endblock %}
 
 
+{% block scripts %}
+    {{ super() }}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3.2/jquery.easing.min.js"></script>
@@ -52,20 +27,22 @@
     <![endif]-->
     <script type="text/javascript"
             src="https://datosgobar.github.io/series-tiempo-ar-explorer/static/js/main.31cd1498.js"></script>
-</head>
-<body>
+    <script>window.onload = function () {
+        TSExplorer.render("root", {
+            featured: ["103.1_I2N_2016_M_15", "168.1_T_CAMBIOR_D_0_0_26", "116.3_TCRMA_0_M_36", "143.3_NO_PR_2004_A_21", "101.1_I2NG_2016_M_22", "11.3_VMASD_2004_M_23", "11.3_VMATC_2004_M_12", "103.1_I2N_2016_M_19", "106.4_I1PNMEEVM_2015_M_51", "106.4_I1TPNVM_2015_M_47", "106.4_I1NGVM_2015_M_41", "106.4_I1NGVA_2015_M_39"],
+            seriesApiUri: "http://apis-stg.datos.gob.ar/series/api",
+            catalogId: "datosgobar",
+            useBrowserRouter: true,
+            browserRouterConf: {
+                basename: "/series/api/series"
+            }
+        })
+    }</script>
+{% endblock %}
+
+
+
+{%- block content %}
 <noscript>You need to enable JavaScript to run this app.</noscript>
 <div id="root"></div>
-<script>window.onload = function () {
-    TSExplorer.render("root", {
-        featured: ["103.1_I2N_2016_M_15", "168.1_T_CAMBIOR_D_0_0_26", "116.3_TCRMA_0_M_36", "143.3_NO_PR_2004_A_21", "101.1_I2NG_2016_M_22", "11.3_VMASD_2004_M_23", "11.3_VMATC_2004_M_12", "103.1_I2N_2016_M_19", "106.4_I1PNMEEVM_2015_M_51", "106.4_I1TPNVM_2015_M_47", "106.4_I1NGVM_2015_M_41", "106.4_I1NGVA_2015_M_39"],
-        seriesApiUri: "http://apis-stg.datos.gob.ar/series/api",
-        catalogId: "datosgobar",
-        useBrowserRouter: true,
-        browserRouterConf: {
-            basename: "/series/api/series"
-        }
-    })
-}</script>
-</body>
-</html>
+{% endblock -%}
