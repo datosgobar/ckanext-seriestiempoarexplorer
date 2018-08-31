@@ -1,3 +1,115 @@
+/*
+------------------------------------------------------------------------------------
+Mixins:
+------------------------------------------------------------------------------------
+*/
+div.share > span > ul.social {
+  padding: 0;
+}
+div.form-horizontal > div.form-group > label.col-sm-3.control-label {
+  width: 25%;
+}
+div.form-horizontal > div.form-group > label.col-sm-3.control-label:after{
+  content: normal;
+}
+div.form-horizontal > div.form-group > label.col-sm-6.control-label {
+  padding-right: 0;
+}
+
+section#home #hero {
+  height: 270px !important;
+}
+div#hero > div.hero-caption > div.container > .row > div > h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+div#hero > div.hero-caption > div.container > .row > div > p {
+  font-size: 16px;
+}
+/*
+------------------------------------------------------------------------------------
+Globales:
+------------------------------------------------------------------------------------
+*/
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+html {
+  min-height: 100%;
+  position: relative;
+  font-size: 14px;
+}
+body {
+  font-family: 'Regular', sans-serif;
+  font-size: 1rem;
+  line-height: 1.25em;
+  letter-spacing: 0;
+  color: #686868;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-spacing: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Bold', sans-serif;
+  line-height: 1.25em;
+  color: #686868;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-spacing: normal;
+}
+/*
+------------------------------------------------------------------------------------
+
+Desestimar este ajuste si en el #root no figura y el .wrapper dentro de #root tiene
+un padding-top: 80px; Nestor 30/08/2018
+
+------------------------------------------------------------------------------------
+*/
+.home #title {
+/*  padding-top: 80px !important;*/
+}
+#header {
+  width: 100% !important;
+  position: fixed !important;
+/*  padding: 15px 0 !important;*/
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+#root .wrapper {
+  border: 0 !important;
+  background: white !important;
+  /*padding-top: 80px;*/
+}
+#root section#listado #filters ul {
+  padding-left: 0 !important;
+}
+#root section#listado #filters ul li a label {
+  font-weight: normal !important;
+  margin-bottom: 0 !important;
+}
+
+/*
+------------------------------------------------------------------------------------
+Mobile:
+------------------------------------------------------------------------------------
+*/
+@media (max-width: 767px) {
+  #header .logo-header .logo-and-xs-icon {
+    padding-left: 50px !important;
+  }
+}
+
 #title {
     color: inherit;
 }
