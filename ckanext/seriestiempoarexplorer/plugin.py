@@ -7,6 +7,7 @@ class SeriestiempoarexplorerPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IRoutes)
 
     valid_series_paths = [
+        {"path": "/series", "redirect": "/series/api"},
         {"path": "/series/api"},
         {"path": "/series/api/", "name": "series_tiempo_ar_explorer"},
         {"path": "/series/api/series"},
@@ -26,10 +27,13 @@ class SeriestiempoarexplorerPlugin(plugins.SingletonPlugin):
                 m.connect(path_conf.get("name"), path_conf.get("path"),
                           controller='ckanext.seriestiempoarexplorer.controller:TSArController',
                           action='series_tiempo')
+            elif path_conf.get('redirect'):
+                m.redirect(path_conf.get("path"), path_conf.get("redirect"))
             else:
                 m.connect(path_conf.get("path"),
                           controller='ckanext.seriestiempoarexplorer.controller:TSArController',
                           action='series_tiempo')
+
         return m
 
     def after_map(self, m):
