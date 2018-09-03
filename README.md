@@ -20,9 +20,3 @@ Para instalar `ckanext-seriestiempoarexplorer`:
 
 4. Reiniciá Andino.
 
-## Funcionalidades base
-
-El plugin template default permite agregar a tu instancia de Andino dos puntos de menú en la navegación superior de Andino:
-
-* Andino: Al hacer click redirige a la [documentación oficial de Portal Andino](http://portal-andino.readthedocs.io/).
-* Nueva Sección: Es una demostración de cómo agregar una ṕágina de contenido estático en Andino.
