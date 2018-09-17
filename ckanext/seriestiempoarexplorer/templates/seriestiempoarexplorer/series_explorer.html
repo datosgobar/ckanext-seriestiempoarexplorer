@@ -37,7 +37,7 @@
         };
         TSExplorer.render("root", {
             featured: "{{ h.get_theme_config('series_tiempo_ar_explorer.featured') or '' }}".split(",").map(myTrim).filter(Boolean),
-            seriesApiUri: "http://apis.datos.gob.ar/series/api",
+            seriesApiUri: "https://apis.datos.gob.ar/series/api",
             catalogId: "{{ h.get_theme_config('portal-metadata.id', '') }}",
             useBrowserRouter: true,
             browserRouterConf: {
