@@ -12,6 +12,8 @@ class SeriestiempoarexplorerPlugin(plugins.SingletonPlugin):
         {"path": "/series/api/", "name": "series_tiempo_ar_explorer"},
         {"path": "/series/api/series"},
         {"path": "/series/api/series/"},
+        {"path": "/series/api/search"},
+        {"path": "/series/api/search/"},
     ]
 
     # IConfigurer
