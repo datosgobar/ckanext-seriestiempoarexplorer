@@ -37,7 +37,7 @@
         };
         TSExplorer.render("root", {
             featured: "{{ h.get_theme_config('series_tiempo_ar_explorer.featured') or '' }}".split(",").map(myTrim).filter(Boolean),
-            seriesApiUri: "{{ h.get_theme_config('series_tiempo_ar_explorer.uri-api') or '' }}",
+            seriesApiUri: "{{ h.get_theme_config('series_tiempo_ar_explorer.series-api-uri') or '' }}",
             catalogId: "{{ h.get_theme_config('portal-metadata.id', '') }}",
             useBrowserRouter: true,
             browserRouterConf: {
