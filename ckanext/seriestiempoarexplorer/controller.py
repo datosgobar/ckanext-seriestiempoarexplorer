@@ -8,5 +8,4 @@ logger = getLogger(__name__)
 
 class TSArController(base.BaseController):
     def series_tiempo(self):
-        return base.render('seriestiempoarexplorer/series_explorer.html',
-                           extra_vars={'series_api_uri': config.get('seriesapi.site_uri')})
+        return base.render('seriestiempoarexplorer/series_explorer.html', extra_vars={})
