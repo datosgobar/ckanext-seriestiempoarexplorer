@@ -1,6 +1,5 @@
 from logging import getLogger
 
-from pylons.config import config
 import ckan.lib.base as base
 
 logger = getLogger(__name__)
