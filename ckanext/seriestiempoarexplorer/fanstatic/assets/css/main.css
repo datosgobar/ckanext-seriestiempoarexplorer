@@ -1,3 +1,7 @@
+#filters label:after {
+  content: none;
+}
+
 .result-filter-count {
   color: gray;
   font-weight: 100;
