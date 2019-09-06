@@ -16,11 +16,19 @@
       {% resource 'seriestiempoarexplorer/assets/css/explorer_plugin.css' %}
       {% resource 'seriestiempoarexplorer/assets/css/font-awesome/font-awesome.css' %}
 
+      {% set background_config = h.get_default_background_configuration() or '0.5' %}
+      <style type="text/css">
+        {{ 'div.hero-caption{background-color: rgba(0, 0, 0, ' +  background_config  + ');height: 270px;padding-top: 22.5px;}'}}
+      </style>
+
 {% endblock %}
+
 
 
 {% block scripts %}
     {{ super() }}
+
+    {% set bgUrl = h.get_theme_config('title.background-image') or '/usr/lib/ckan/default/src/ckanext-gobar-theme/ckanext/gobar_theme/public/img/home_bg.png' %}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3.2/jquery.easing.min.js"></script>
@@ -52,7 +60,8 @@
             browserRouterConf: {
                 basename: "/series/api"
             }
-        })
+        });
+        $('#hero').css('background-image', 'url({{ bgUrl }})');
     }</script>
 {% endblock %}
 
