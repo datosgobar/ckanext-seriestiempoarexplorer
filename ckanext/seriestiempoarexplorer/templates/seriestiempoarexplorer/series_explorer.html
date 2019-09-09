@@ -16,7 +16,7 @@
       {% resource 'seriestiempoarexplorer/assets/css/explorer_plugin.css' %}
       {% resource 'seriestiempoarexplorer/assets/css/font-awesome/font-awesome.css' %}
 
-      {% set config_background_opacity = h.get_default_background_configuration() %}
+      {% set config_background_opacity = h.get_from_config_file('andino.background_opacity') %}
       {% set bgOpacity = config_background_opacity if config_background_opacity else '0.5' %}
       {% set config_background_image = h.get_theme_config('title.background-image') %}
       {% set bgUrl = config_background_image if config_background_image else (h.get_from_config_file('ckan.site_url') + "/img/home_bg.png") %}
@@ -67,7 +67,6 @@
                 basename: "/series/api"
             }
         });
-//        $('#hero').css('background-image', 'url({{ bgUrl }})');
     }</script>
 {% endblock %}
 
