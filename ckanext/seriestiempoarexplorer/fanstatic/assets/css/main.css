@@ -967,12 +967,26 @@ section#home #hero .container #form-hero-search .form-group i {
   color: #ffffff;
 }
 /*------------------------------------------------------------------------------------*/
-div#hero {
-  background-color: rgba(0,0,0,0.5) !important; /* PERREO */
+div#hero h1.title-xxlg.font-1.color-w {
+  font-size: 50px;
+  font-weight: 500;
+}
+div#hero h1.title-xlg.font-1.color-w {
+  font-size: 50px;
+  font-weight: 500;
+}
+div#hero p.large.color-w.mg-b{
+  font-size: 16px;
+  font-weight: 400;
+}
+div#hero p.larger.color-w.mg-b{
+  font-size: 16px;
+  font-weight: 400;
 }
 div#hero > div.container {
   padding-left: 335.5px;
   padding-right: 335.5px;
+  padding-top: 30px;
 }
 section#listado #hero,
 section#detalle #hero {
