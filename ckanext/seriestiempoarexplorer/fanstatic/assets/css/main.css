@@ -721,40 +721,40 @@ FONTS:
 */
 @font-face {
   font-family: 'Regular';
-  src: url('../fonts/roboto/Roboto-Regular.eot');
-  src: url('../fonts/roboto/Roboto-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto/Roboto-Regular.woff') format('woff'), url('../fonts/roboto/Roboto-Regular.ttf') format('truetype'), url('../fonts/roboto/Roboto-Regular.svg#Roboto-Regular') format('svg');
+  src: url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/roboto/Roboto-Regular.eot');
+  src: url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/roboto/Roboto-Regular.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/roboto/Roboto-Regular.woff') format('woff'), url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/roboto/Roboto-Regular.ttf') format('truetype'), url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/roboto/Roboto-Regular.svg#Roboto-Regular') format('svg');
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
 }
 @font-face {
   font-family: 'Medium';
-  src: url('../fonts/roboto/Roboto-Medium.eot');
-  src: url('../fonts/roboto/Roboto-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto/Roboto-Medium.woff') format('woff'), url('../fonts/roboto/Roboto-Medium.ttf') format('truetype'), url('../fonts/roboto/Roboto-Medium.svg#Roboto-Medium') format('svg');
+  src: url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/roboto/Roboto-Medium.eot');
+  src: url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/roboto/Roboto-Medium.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/roboto/Roboto-Medium.woff') format('woff'), url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/roboto/Roboto-Medium.ttf') format('truetype'), url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/roboto/Roboto-Medium.svg#Roboto-Medium') format('svg');
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
 }
 @font-face {
   font-family: 'Bold';
-  src: url('../fonts/roboto/Roboto-Bold.eot');
-  src: url('../fonts/roboto/Roboto-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto/Roboto-Bold.woff') format('woff'), url('../fonts/roboto/Roboto-Bold.ttf') format('truetype'), url('../fonts/roboto/Roboto-Bold.svg#Roboto-Bold') format('svg');
+  src: url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/roboto/Roboto-Bold.eot');
+  src: url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/roboto/Roboto-Bold.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/roboto/Roboto-Bold.woff') format('woff'), url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/roboto/Roboto-Bold.ttf') format('truetype'), url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/roboto/Roboto-Bold.svg#Roboto-Bold') format('svg');
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
 }
 @font-face {
   font-family: 'Black';
-  src: url('../fonts/roboto/Roboto-Black.eot');
-  src: url('../fonts/roboto/Roboto-Black.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto/Roboto-Black.woff') format('woff'), url('../fonts/roboto/Roboto-Black.ttf') format('truetype'), url('../fonts/roboto/Roboto-Black.svg#Roboto-Black') format('svg');
+  src: url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/roboto/Roboto-Black.eot');
+  src: url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/roboto/Roboto-Black.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/roboto/Roboto-Black.woff') format('woff'), url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/roboto/Roboto-Black.ttf') format('truetype'), url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/roboto/Roboto-Black.svg#Roboto-Black') format('svg');
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
 }
 @font-face {
   font-family: 'Gotham-Bold';
-  src: url('../fonts/gotham/Gotham-Bold.eot');
-  src: url('../fonts/gotham/Gotham-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/gotham/Gotham-Bold.woff') format('woff'), url('../fonts/gotham/Gotham-Bold.ttf') format('truetype'), url('../fonts/gotham/Gotham-Bold.svg#Roboto-Black') format('svg');
+  src: url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/gotham/Gotham-Bold.eot');
+  src: url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/gotham/Gotham-Bold.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts/gotham/Gotham-Bold.woff') format('woff'), url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts//gotham/Gotham-Bold.ttf') format('truetype'), url('https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/fonts//gotham/Gotham-Bold.svg#Gotham-Bold') format('svg');
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
