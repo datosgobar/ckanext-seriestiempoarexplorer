@@ -12,7 +12,6 @@
       {% resource 'seriestiempoarexplorer/assets/css/font-awesome/fontawesome-pro-svg-framework.css' %}
       {% resource 'seriestiempoarexplorer/assets/css/normalize.css' %}
       {% resource 'seriestiempoarexplorer/assets/css/react-datepicker.css' %}
-      {% resource 'seriestiempoarexplorer/assets/css/main.css' %}
       {% resource 'seriestiempoarexplorer/assets/css/explorer_plugin.css' %}
       {% resource 'seriestiempoarexplorer/assets/css/font-awesome/font-awesome.css' %}
 
@@ -21,10 +20,13 @@
       {% set config_background_image = h.get_theme_config('title.background-image') %}
       {% set bgUrl = config_background_image if config_background_image else (h.get_from_config_file('ckan.site_url') + "/img/home_bg.png") %}
 
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.10/dist/css/main.css" type="text/css">
+
       <style type="text/css">
 	div#hero > div.container{background-color: rgba(0, 0, 0, {{ bgOpacity }} ); height: 100%;}
 
 	section#home #hero {background-image: url('{{ bgUrl }}');}
+    section#detalle #hero {background-image: url('{{ bgUrl }}');}
       </style>
 
 {% endblock %}
@@ -44,7 +46,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.8/dist/js/main.js"></script>
+            src="https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.4.10/dist/js/main.js"></script>
     <script>window.onload = function () {
         var myTrim = function(TS_ID) {
             return TS_ID.trim();
