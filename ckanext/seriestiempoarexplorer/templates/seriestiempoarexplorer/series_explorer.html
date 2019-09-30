@@ -1,5 +1,7 @@
 {% extends "gobar_page.html" %}
 
+{% set bgUrl = h.get_theme_config('title.background-image') or (h.get_from_config_file('ckan.site_url') + "/img/home_bg.png") %}
+
 {% block styles %}
       {{ super() }}
 
@@ -17,16 +19,13 @@
 
       {% set config_background_opacity = h.get_from_config_file('andino.background_opacity') %}
       {% set bgOpacity = config_background_opacity if config_background_opacity else '0.5' %}
-      {% set config_background_image = h.get_theme_config('title.background-image') %}
-      {% set bgUrl = config_background_image if config_background_image else (h.get_from_config_file('ckan.site_url') + "/img/home_bg.png") %}
 
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.5.0/dist/css/main.css" type="text/css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.5.1/dist/css/main.css" type="text/css">
 
       <style type="text/css">
-	div#hero > div.container{background-color: rgba(0, 0, 0, {{ bgOpacity }} ); height: 100%;}
 
-	section#home #hero {background-image: url('{{ bgUrl }}');}
-    section#detalle #hero {background-image: url('{{ bgUrl }}');}
+        div#hero > div.hero-caption{background-color: rgba(0, 0, 0, {{ bgOpacity }} );}
+
       </style>
 
 {% endblock %}
@@ -37,7 +36,6 @@
     {{ super() }}
 
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3.2/jquery.easing.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -46,7 +44,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.5.0/dist/js/main.js"></script>
+            src="https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@2.5.1/dist/js/main.js"></script>
     <script>window.onload = function () {
         var myTrim = function(TS_ID) {
             return TS_ID.trim();
@@ -67,11 +65,11 @@
             formatChartUnits: true,
             browserRouterConf: {
                 basename: "/series/api"
-            }
+            },
+            heroImageUrl: "{{ bgUrl }}"
         });
     }</script>
 {% endblock %}
-
 
 
 {%- block content %}
@@ -82,4 +80,6 @@
     </div>
 
 </div>
-{% endblock -%}
+{% endblock %}
+
+
