@@ -55,19 +55,21 @@
             catalogId: "{{ h.get_theme_config('portal-metadata.id', '') }}",
             useBrowserRouter: true,
             laps: {
-               Diaria: 90,
-               Mensual: 24,
-               Trimestral: 20,
-               Semestral: 10,
-               Anual: 10
+               Diaria: "{{ h.get_theme_config('series_tiempo_ar_explorer.laps.diaria') or 90 }}",
+               Mensual: "{{ h.get_theme_config('series_tiempo_ar_explorer.laps.mensual') or 24 }}",
+               Trimestral: "{{ h.get_theme_config('series_tiempo_ar_explorer.laps.mensual') or 24 }}",
+               Semestral: "{{ h.get_theme_config('series_tiempo_ar_explorer.laps.semestral') or 10 }}",
+               Anual: "{{ h.get_theme_config('series_tiempo_ar_explorer.laps.anual') or 10 }}"
             },
-            locale: 'AR',
-            formatChartUnits: true,
+            locale: "{{ h.get_theme_config('series_tiempo_ar_explorer.locale') or 'AR' }}",
+            formatChartUnits: "{{ h.get_theme_config('series_tiempo_ar_explorer.laps.diaria') or true }}",
             browserRouterConf: {
                 basename: "/series/api"
             },
-            heroImageUrl: "{{ bgUrl }}"
+            maxDecimals: "{{ h.get_theme_config('series_tiempo_ar_explorer.max-decimals') or 2 }}",
+            heroImageUrl: "{{ h.get_theme_config('series_tiempo_ar_explorer.hero-image-url') or bgUrl }}"
         });
+
     }</script>
 {% endblock %}
 
