@@ -57,17 +57,16 @@
             laps: {
                Diaria: "{{ h.get_theme_config('series_tiempo_ar_explorer.laps.diaria') or 90 }}",
                Mensual: "{{ h.get_theme_config('series_tiempo_ar_explorer.laps.mensual') or 24 }}",
-               Trimestral: "{{ h.get_theme_config('series_tiempo_ar_explorer.laps.mensual') or 24 }}",
+               Trimestral: "{{ h.get_theme_config('series_tiempo_ar_explorer.laps.trimestral') or 20 }}",
                Semestral: "{{ h.get_theme_config('series_tiempo_ar_explorer.laps.semestral') or 10 }}",
                Anual: "{{ h.get_theme_config('series_tiempo_ar_explorer.laps.anual') or 10 }}"
             },
             locale: "{{ h.get_theme_config('series_tiempo_ar_explorer.locale') or 'AR' }}",
-            formatChartUnits: "{{ h.get_theme_config('series_tiempo_ar_explorer.laps.diaria') or true }}",
             browserRouterConf: {
                 basename: "/series/api"
             },
             maxDecimals: "{{ h.get_theme_config('series_tiempo_ar_explorer.max-decimals') or 2 }}",
-            heroImageUrl: "{{ h.get_theme_config('series_tiempo_ar_explorer.hero-image-url') or bgUrl }}"
+            heroImageUrl: "{{ bgUrl }}"
         });
 
     }</script>
